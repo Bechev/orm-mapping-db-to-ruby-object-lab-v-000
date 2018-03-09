@@ -29,9 +29,9 @@ class Student
       FROM students
       WHERE grade = 9;
     SQL
-
+    puts sql
     DB[:conn].execute(sql).map do |row|
-    puts  self.new_from_db(row)
+     self.new_from_db(row)
     end
   end
 
